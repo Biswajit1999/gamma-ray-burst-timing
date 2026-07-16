@@ -1,6 +1,6 @@
 # Implementation Plan — Fermi GBM T90 Reproducibility Lab
 
-Author: Biswajit Jana. Local Claude Code implementation pass, project from the
+Author: Biswajit Jana. Local implementation pass, project from the
 30-project portfolio pack (`BUILD_FIRST`, priority 9.0/10). No git operations.
 
 ## 1. Literature verification (done before any code)

@@ -8,6 +8,6 @@ The following are starting points, not a substitute for final citation verificat
 - Scargle et al. 2013 Bayesian Blocks
 - Stingray timing package, arXiv:1901.07681
 
-## Claude requirement
+## Verification requirement
 
 Before finalising `references.bib`, verify each title, author list, year, journal, DOI/arXiv identifier and archive URL against a primary source. If a citation cannot be verified, mark it `TODO_VERIFY` rather than inventing metadata.

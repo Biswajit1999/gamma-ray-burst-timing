@@ -1,6 +1,6 @@
 # Local Completion Report — Fermi GBM T90 Reproducibility Lab
 
-Author: Biswajit Jana. This report documents a local Claude Code implementation pass
+Author: Biswajit Jana. This report documents a local implementation pass
 (project 10 of the 30-project pack, `BUILD_FIRST` priority 9.0/10). No git operations
 were performed. Nothing has been published. This project's folder was renamed from
 `fermi-gbm-t90-reproducibility-lab` to `gamma-ray-burst-timing` for a simpler,
