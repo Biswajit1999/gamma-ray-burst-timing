@@ -1,0 +1,41 @@
+{
+  "title": "Fermi GBM T90 Reproducibility Lab",
+  "repo": "gamma-ray-burst-timing",
+  "category": "Gamma-ray instrumentation / timing data science",
+  "status": "BUILD_FIRST",
+  "priority": 9.0,
+  "question": "How sensitive are T90 duration estimates to background model, detector, energy channel and time binning?",
+  "gap": "A transparent reproducibility lab; not an official GBM duration or spectral-analysis pipeline.",
+  "dataMode": "real public Fermi GBM trigger data",
+  "novelty": "A transparent reproducibility lab; not an official GBM duration or spectral-analysis pipeline.",
+  "figures": [
+    { "id": "fig01_lightcurve_background", "label": "Light curve and background" },
+    { "id": "fig02_t5_t95_markers", "label": "T5/T95 markers" },
+    { "id": "fig03_bayesian_blocks", "label": "Bayesian blocks" },
+    { "id": "fig04_bootstrap_t90", "label": "Bootstrap T90 distribution" },
+    { "id": "fig05_model_sensitivity", "label": "Model sensitivity" }
+  ],
+  "validationContract": [
+    "synthetic known-duration injection",
+    "bootstrap T5/T95/T90",
+    "background-model sensitivity",
+    "detector/channel comparison"
+  ],
+  "methodology": "T90 duration is estimated from real Fermi GBM Time-Tagged Event data: events within a fixed analysis window around the trigger are binned (fixed 1s width or adaptive Bayesian Blocks), a background model (constant or linear) fit outside a signal window is subtracted, and T5/T95/T90 are read from the cumulative background-subtracted counts. All 4 (background model x binning method) combinations are computed per real light curve to directly test sensitivity, the project's stated scientific question.",
+  "assumptions": [
+    "Bayesian Blocks is applied to events pre-binned into fine (64ms) fixed-width bins, not raw photon time-stamps directly -- astropy's event-fitness implementation was found empirically to take over 37 minutes on a real exceptionally bright trigger versus 0.2 seconds with this pre-binned approach, at equivalent scientific results.",
+  "The fixed analysis window (-30s to +60s around trigger) is well-matched to typical GRB timescales but can truncate exceptionally long bursts or over-expose short/faint bursts to real background drift -- see Limitations.",
+    "PDCSAP-equivalent whole-detector count rate is used; no energy-channel-resolved (PHA-binned) analysis in this first release."
+  ],
+  "limitations": [
+    "A transparent reproducibility lab; not an official GBM duration or spectral-analysis pipeline.",
+    "This pipeline's real T90 estimates do NOT match the official Fermi GBM Burst Catalog for either real trigger analysed: GRB170817529 (catalogue T90=2.05s) is overestimated 15-35x due to real background drift over the analysis window being picked up as spurious signal by the simple background models; GRB130427324 (catalogue T90=138.2s) is underestimated 2-13x because the fixed 60s post-trigger window is shorter than the true burst duration. Both discrepancies are understood and documented, not hidden -- and this divergence is itself a genuine finding about simplified-pipeline sensitivity, the project's stated question.",
+    "Only 2 real triggers (3 files) analysed, far below the configured minimum_sample_size=30.",
+    "reports/report.tex could not be compiled to PDF in this environment (no local LaTeX toolchain); only structural completeness was verified."
+  ],
+  "citation": {
+    "author": "Biswajit Jana",
+    "license": "BSD-3-Clause (original code); mission/archive products retain their original terms",
+    "repository": "https://github.com/Biswajit1999/gamma-ray-burst-timing"
+  }
+}

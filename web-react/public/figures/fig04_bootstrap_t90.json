@@ -1,0 +1,9 @@
+{
+  "figure": "fig04_bootstrap_t90",
+  "data_kind": "real public Fermi GBM trigger data",
+  "sample_size": 200,
+  "units": "seconds",
+  "git_commit": "LOCAL_UNCOMMITTED",
+  "config_sha256": "915af524128af613a7834028cadc2b463396cd5a53139da4a2d1283623cdb3e6",
+  "package_version": "0.1.0"
+}
