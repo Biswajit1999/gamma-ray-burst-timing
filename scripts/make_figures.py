@@ -13,6 +13,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+import scienceplots  # noqa: F401 - importing registers the SciencePlots styles
 
 from fermi_gbm_t90_reproducibility_lab import __version__
 from fermi_gbm_t90_reproducibility_lab.background import fit_background
@@ -24,6 +25,8 @@ from fermi_gbm_t90_reproducibility_lab.io import load_tte
 from fermi_gbm_t90_reproducibility_lab.plotting import plot_demo
 from fermi_gbm_t90_reproducibility_lab.provenance import get_git_commit, read_manifest, sha256_config
 from fermi_gbm_t90_reproducibility_lab.synthetic import SyntheticBurstSpec, make_synthetic_events
+
+plt.style.use(["science", "no-latex"])
 
 
 def _sidecar(path: Path, *, data_kind: str, sample_size: int, units: str, config_path: Path, extra: dict | None = None) -> None:
@@ -44,7 +47,7 @@ def _sidecar(path: Path, *, data_kind: str, sample_size: int, units: str, config
 def _save(fig, out_dir: Path, name: str) -> Path:
     svg_path = out_dir / f"{name}.svg"
     png_path = out_dir / f"{name}.png"
-    fig.savefig(svg_path)
+    fig.savefig(svg_path, dpi=180)
     fig.savefig(png_path, dpi=300)
     plt.close(fig)
     return png_path
@@ -63,7 +66,7 @@ def _make_figures_common(out_dir: Path, config_path: Path, data_kind: str, event
     ax.axvspan(signal_window[0], signal_window[1], color="orange", alpha=0.15, label="signal window")
     ax.set_xlabel("Time since trigger (s)")
     ax.set_ylabel("Counts / 1s bin")
-    ax.set_title(f"Light curve and background — {tag} (n={event_times.size} events)")
+    ax.set_title(f"Light curve and background - {tag} (n={event_times.size} events)")
     ax.legend(fontsize=8)
     path = _save(fig, out_dir, "fig01_lightcurve_background")
     _sidecar(path, data_kind=data_kind, sample_size=event_times.size, units="counts vs seconds", config_path=config_path)
@@ -79,7 +82,7 @@ def _make_figures_common(out_dir: Path, config_path: Path, data_kind: str, event
     ax.axhline(0.95, color="gray", lw=0.5)
     ax.set_xlabel("Time since trigger (s)")
     ax.set_ylabel("Cumulative fraction of background-subtracted counts")
-    ax.set_title(f"T5/T95 markers — {tag} (T90={duration.t90:.2f}s)")
+    ax.set_title(f"T5/T95 markers - {tag} (T90={duration.t90:.2f}s)")
     ax.legend(fontsize=8)
     path = _save(fig, out_dir, "fig02_t5_t95_markers")
     _sidecar(path, data_kind=data_kind, sample_size=event_times.size, units="fraction vs seconds", config_path=config_path)
@@ -91,7 +94,7 @@ def _make_figures_common(out_dir: Path, config_path: Path, data_kind: str, event
         ax.stairs(bb.counts, bb.bin_edges, color="tab:blue", fill=True, alpha=0.6)
         ax.set_xlabel("Time since trigger (s)")
         ax.set_ylabel("Counts per Bayesian block")
-        ax.set_title(f"Bayesian blocks — {tag} ({bb.bin_centers.size} blocks)")
+        ax.set_title(f"Bayesian blocks - {tag} ({bb.bin_centers.size} blocks)")
         path = _save(fig, out_dir, "fig03_bayesian_blocks")
         _sidecar(path, data_kind=data_kind, sample_size=bb.bin_centers.size, units="counts vs seconds", config_path=config_path)
     except Exception:  # noqa: BLE001
@@ -117,7 +120,7 @@ def _make_figures_common(out_dir: Path, config_path: Path, data_kind: str, event
         ax.legend(fontsize=8)
     ax.set_xlabel("Bootstrap-resampled T90 (s)")
     ax.set_ylabel("Count")
-    ax.set_title(f"Bootstrap T90 distribution — {tag} (n={len(bootstrap_t90s)} resamples)")
+    ax.set_title(f"Bootstrap T90 distribution - {tag} (n={len(bootstrap_t90s)} resamples)")
     path = _save(fig, out_dir, "fig04_bootstrap_t90")
     _sidecar(path, data_kind=data_kind, sample_size=len(bootstrap_t90s), units="seconds", config_path=config_path)
 
@@ -141,7 +144,7 @@ def _make_figures_common(out_dir: Path, config_path: Path, data_kind: str, event
         ax.set_ylabel("T90 (s)")
         ax.set_xlabel("background model / binning method")
         plt.setp(ax.get_xticklabels(), rotation=30, ha="right", fontsize=8)
-    ax.set_title(f"T90 sensitivity to background model and binning — {tag}")
+    ax.set_title(f"T90 sensitivity to background model and binning - {tag}")
     path = _save(fig, out_dir, "fig05_model_sensitivity")
     _sidecar(path, data_kind=data_kind, sample_size=len(sensitivity), units="seconds", config_path=config_path)
 
