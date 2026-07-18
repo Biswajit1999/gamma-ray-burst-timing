@@ -1,0 +1,72 @@
+{
+  "project": "Fermi GBM T90 Reproducibility Lab",
+  "data_kind": "real public Fermi GBM trigger data",
+  "metrics": [
+    {
+      "name": "median_t90_all_configurations",
+      "estimate": 46.136,
+      "uncertainty_low": null,
+      "uncertainty_high": null,
+      "units": "seconds",
+      "sample_size": 12
+    },
+    {
+      "name": "median_t90_background_constant",
+      "estimate": 46.136,
+      "uncertainty_low": null,
+      "uncertainty_high": null,
+      "units": "seconds",
+      "sample_size": 6
+    },
+    {
+      "name": "median_t90_background_linear",
+      "estimate": 51.576,
+      "uncertainty_low": null,
+      "uncertainty_high": null,
+      "units": "seconds",
+      "sample_size": 6
+    },
+    {
+      "name": "median_t90_binning_fixed_1s",
+      "estimate": 61.0,
+      "uncertainty_low": null,
+      "uncertainty_high": null,
+      "units": "seconds",
+      "sample_size": 6
+    },
+    {
+      "name": "median_t90_binning_bayesian_blocks",
+      "estimate": 41.760000000000005,
+      "uncertainty_low": null,
+      "uncertainty_high": null,
+      "units": "seconds",
+      "sample_size": 6
+    },
+    {
+      "name": "median_t90_detector_NAI_00",
+      "estimate": 46.136,
+      "uncertainty_low": null,
+      "uncertainty_high": null,
+      "units": "seconds",
+      "sample_size": 8
+    },
+    {
+      "name": "median_t90_detector_NAI_01",
+      "estimate": 46.304,
+      "uncertainty_low": null,
+      "uncertainty_high": null,
+      "units": "seconds",
+      "sample_size": 4
+    }
+  ],
+  "provenance": {
+    "config_sha256": "915af524128af613a7834028cadc2b463396cd5a53139da4a2d1283623cdb3e6",
+    "git_commit": "LOCAL_UNCOMMITTED",
+    "package_version": "0.1.0",
+    "n_files_attempted": 3,
+    "n_t90_estimates": 12
+  },
+  "warnings": [
+    "n_configurations=12 below minimum_sample_size=30"
+  ]
+}
