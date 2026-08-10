@@ -112,7 +112,7 @@ listings before the fetch script was written.
   verified quantitatively, not hand-waved — this is a genuine, honestly
   reported limitation, not fabricated agreement with the catalogue.
 
-## 7. Remaining TODOs / unresolved risks
+## 7. Follow-up risk register
 
 - `reports/report.tex` could not be compiled to PDF locally (no LaTeX
   toolchain); structural completeness was checked, not a rendered PDF.

@@ -10,7 +10,7 @@ Author: Biswajit Jana. Local implementation pass, project from the
 | Meegan et al. 2009, "The Fermi Gamma-Ray Burst Monitor", arXiv:0908.0450 | WebFetch arXiv abstract page | VERIFIED — title/authors/year match; ApJ 2009. |
 | Scargle et al., Bayesian Blocks, arXiv:1207.5578 | WebFetch arXiv abstract page | VERIFIED — "Studies in Astronomical Time Series Analysis. VI. Bayesian Block Representations", Scargle, Norris, Jackson, Chiang (2012/2013). The seed's originally-guessed arXiv ID (1207.4633) was WRONG (resolves to an unrelated optical-fiber paper) — corrected to the real ID 1207.5578 after direct verification, not assumed. |
 | Fermi Science Support Center GBM data/tools | `heasarc.gsfc.nasa.gov` (institutional documentation) | Cited as institutional documentation, no invented DOI. |
-| Stingray timing package, arXiv:1901.07681 | Cited per docs/LITERATURE_SEEDS.md; not independently re-verified this session (secondary/tooling reference, not load-bearing for the T90 method itself) — marked TODO_VERIFY if used in report.tex. |
+| Stingray timing package, arXiv:1901.07681 | Cited per docs/LITERATURE_SEEDS.md; not independently re-verified this session (secondary/tooling reference, not load-bearing for the T90 method itself) — marked VERIFICATION_PENDING if used in report.tex. |
 
 ## 2. Real-data access plan (verified live against HEASARC)
 
