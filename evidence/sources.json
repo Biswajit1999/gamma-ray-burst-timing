@@ -1,0 +1,71 @@
+{
+  "project": "Fermi GBM T90 Reproducibility Lab",
+  "repository": "https://github.com/Biswajit1999/gamma-ray-burst-timing",
+  "files": [
+    {
+      "label": "Provenance",
+      "path": "data/provenance.yml",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Manifest",
+      "path": "data/manifest.csv",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Research reference",
+      "path": "data/research-reference.json",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Demo",
+      "path": "data/example/demo.csv",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Fig05 model sensitivity",
+      "path": "figures/fig05_model_sensitivity.json",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Fig01 lightcurve background",
+      "path": "figures/fig01_lightcurve_background.json",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Fig02 t5 t95 markers",
+      "path": "figures/fig02_t5_t95_markers.json",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Fig03 bayesian blocks",
+      "path": "figures/fig03_bayesian_blocks.json",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Fig04 bootstrap t90",
+      "path": "figures/fig04_bootstrap_t90.json",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Fig05 model sensitivity",
+      "path": "figures/fig05_model_sensitivity.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Fig00 smoke test",
+      "path": "figures/fig00_smoke_test.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Fig01 lightcurve background",
+      "path": "figures/fig01_lightcurve_background.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Fig02 t5 t95 markers",
+      "path": "figures/fig02_t5_t95_markers.png",
+      "role": "Figures"
+    }
+  ]
+}

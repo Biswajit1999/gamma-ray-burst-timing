@@ -1,0 +1,255 @@
+{
+  "schema": 1,
+  "project": "Fermi GBM T90 Reproducibility Lab",
+  "repository": "https://github.com/Biswajit1999/gamma-ray-burst-timing",
+  "files": [
+    {
+      "label": "Provenance",
+      "path": "data/provenance.yml",
+      "role": "Data and provenance",
+      "bytes": 572,
+      "sha256": "5801ef2a4a420b0f83f019eee14f95bb5b73f64ac37207dc577c3d5b0f3604ff",
+      "hash_basis": "LF-normalised text",
+      "format": "YML"
+    },
+    {
+      "label": "Manifest",
+      "path": "data/manifest.csv",
+      "role": "Data and provenance",
+      "bytes": 1777,
+      "sha256": "e025547d76c910617a16e8bfcbccfbc55327997502d9c563080da8c11fab453a",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 3,
+      "columns": 8,
+      "headers": [
+        "product_id",
+        "source",
+        "source_url",
+        "retrieved_utc",
+        "sha256",
+        "file_size_bytes",
+        "selection_reason"
+      ],
+      "preview": [
+        [
+          "glg_tte_n0_bn170817529_v00",
+          "HEASARC/Fermi-GBM",
+          "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/bursts/2017/bn170817529/current/glg_tte_n0_bn170817529_v00.fit",
+          "2026-07-16T11:47:51.095444+00:00",
+          "4982f0d104d4dabfc43816cf2373c8368ba334984df7c8b0644fb4892e32e58b",
+          "2756160",
+          "deterministic real-trigger sample (bn170817529, detector n0), chosen for known real T90 catalogue values and multi-detector cov..."
+        ],
+        [
+          "glg_tte_n1_bn170817529_v00",
+          "HEASARC/Fermi-GBM",
+          "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/bursts/2017/bn170817529/current/glg_tte_n1_bn170817529_v00.fit",
+          "2026-07-16T11:47:51.095444+00:00",
+          "a07085f5ed8d35ce6ee884456f77c134231d3544153633f389ca1eacc0631351",
+          "2908800",
+          "deterministic real-trigger sample (bn170817529, detector n1), chosen for known real T90 catalogue values and multi-detector cov..."
+        ],
+        [
+          "glg_tte_n0_bn130427324_v00",
+          "HEASARC/Fermi-GBM",
+          "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/bursts/2013/bn130427324/current/glg_tte_n0_bn130427324_v00.fit",
+          "2026-07-16T11:47:51.095444+00:00",
+          "0ed14052686735604ba7aa7df696f9c09c52bb6cb881c756031cc52d8e1a3993",
+          "9504000",
+          "deterministic real-trigger sample (bn130427324, detector n0), chosen for known real T90 catalogue values and multi-detector cov..."
+        ]
+      ]
+    },
+    {
+      "label": "Research reference",
+      "path": "data/research-reference.json",
+      "role": "Data and provenance",
+      "bytes": 714,
+      "sha256": "1bde4faeb6e6cae5d55765e4cc207520c5bdfda940fef2cdbec8391006ccc397",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "title",
+        "description",
+        "equations",
+        "references",
+        "anchors"
+      ],
+      "arrays": {
+        "equations": 3,
+        "references": 1,
+        "anchors": 3
+      }
+    },
+    {
+      "label": "Demo",
+      "path": "data/example/demo.csv",
+      "role": "Data and provenance",
+      "bytes": 80,
+      "sha256": "2231cd2f44a7854fefcb8da60f527333a903c9c7a75fbd9154fdde13de699305",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 5,
+      "columns": 3,
+      "headers": [
+        "x",
+        "value",
+        "uncertainty"
+      ],
+      "preview": [
+        [
+          "0",
+          "0.10",
+          "0.02"
+        ],
+        [
+          "1",
+          "0.18",
+          "0.03"
+        ],
+        [
+          "2",
+          "0.14",
+          "0.02"
+        ],
+        [
+          "3",
+          "0.24",
+          "0.04"
+        ]
+      ]
+    },
+    {
+      "label": "Fig05 model sensitivity",
+      "path": "figures/fig05_model_sensitivity.json",
+      "role": "Tables and numerical results",
+      "bytes": 290,
+      "sha256": "45e7c1450cad25984d02028854a5ceecdc64ff01ebfdb3685331a24ff9613bd3",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "figure",
+        "data_kind",
+        "sample_size",
+        "units",
+        "git_commit",
+        "config_sha256",
+        "package_version"
+      ],
+      "arrays": {}
+    },
+    {
+      "label": "Fig01 lightcurve background",
+      "path": "figures/fig01_lightcurve_background.json",
+      "role": "Tables and numerical results",
+      "bytes": 309,
+      "sha256": "99ddaa02b9068054e5691321e0dd8d5f2d4ef247f13954e40d6ee4d53d0ec856",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "figure",
+        "data_kind",
+        "sample_size",
+        "units",
+        "git_commit",
+        "config_sha256",
+        "package_version"
+      ],
+      "arrays": {}
+    },
+    {
+      "label": "Fig02 t5 t95 markers",
+      "path": "figures/fig02_t5_t95_markers.json",
+      "role": "Tables and numerical results",
+      "bytes": 304,
+      "sha256": "cfb2d5f85c80fec6aedf8776234b6633e6445489f3a6f7dbaa11a14f1b5bcc0b",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "figure",
+        "data_kind",
+        "sample_size",
+        "units",
+        "git_commit",
+        "config_sha256",
+        "package_version"
+      ],
+      "arrays": {}
+    },
+    {
+      "label": "Fig03 bayesian blocks",
+      "path": "figures/fig03_bayesian_blocks.json",
+      "role": "Tables and numerical results",
+      "bytes": 298,
+      "sha256": "b054de1d950625258569e549229cc05d1a707024d6a56bbc3a65912001af0cee",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "figure",
+        "data_kind",
+        "sample_size",
+        "units",
+        "git_commit",
+        "config_sha256",
+        "package_version"
+      ],
+      "arrays": {}
+    },
+    {
+      "label": "Fig04 bootstrap t90",
+      "path": "figures/fig04_bootstrap_t90.json",
+      "role": "Tables and numerical results",
+      "bytes": 288,
+      "sha256": "24c8354cbf3497958db2ee472cde8f263ba3ad281a737b538429a9191a683ee6",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "figure",
+        "data_kind",
+        "sample_size",
+        "units",
+        "git_commit",
+        "config_sha256",
+        "package_version"
+      ],
+      "arrays": {}
+    },
+    {
+      "label": "Fig05 model sensitivity",
+      "path": "figures/fig05_model_sensitivity.png",
+      "role": "Figures",
+      "bytes": 132248,
+      "sha256": "07528596464a47757f5d7d32618ac7dcd8a0daaddd29a816a3f3177af513bbce",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    },
+    {
+      "label": "Fig00 smoke test",
+      "path": "figures/fig00_smoke_test.png",
+      "role": "Figures",
+      "bytes": 162576,
+      "sha256": "49f3cb484ad3d63881c0c176c7fc82cb9d37004bfd8bae62c8a3600aa3a0c439",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    },
+    {
+      "label": "Fig01 lightcurve background",
+      "path": "figures/fig01_lightcurve_background.png",
+      "role": "Figures",
+      "bytes": 122319,
+      "sha256": "6a233c257b810dc339082b1908a870d0df642e706702aaa60be457128f3ef3c3",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    },
+    {
+      "label": "Fig02 t5 t95 markers",
+      "path": "figures/fig02_t5_t95_markers.png",
+      "role": "Figures",
+      "bytes": 131379,
+      "sha256": "4fcd9348ced7e99488a0ce6ca1e44174ecbcb88c8ea9f5bced05238abccbdf96",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    }
+  ]
+}
