@@ -1,5 +1,8 @@
 import numpy as np
 import pytest
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from window_audit_20261119 import quantile_duration, window_sweep, background_ensemble
 
 def test_uniform_pulse():
