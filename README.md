@@ -4,6 +4,12 @@
 
 > **Curation:** `BUILD_FIRST` · Priority 9.0/10 · real public Fermi GBM trigger data
 
+## Research evidence and downloads
+
+[Open the evidence browser file](evidence.html) for 13 selected files, including [`fig05_model_sensitivity.json`](figures/fig05_model_sensitivity.json). Each file has a download link and SHA-256 digest. Serve this checkout with `python -m http.server` to view the static browser.
+
+Rebuild the inventory and browser with `python scripts/evidence_catalog.py` and `python scripts/render_evidence_page.py`.
+
 ## Scientific question
 
 How sensitive are T90 duration estimates to background model, detector, energy channel and time binning?
