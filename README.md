@@ -6,6 +6,13 @@
 
 ## Research evidence and downloads
 
+
+- [Download the machine-readable table profiles](evidence/table-profiles.json) for 2 archived tables. Open `table-evidence.html` from the checkout for the coverage chart.
+- Start with [Fig05 model sensitivity](figures/fig05_model_sensitivity.json), [Fig01 lightcurve background](figures/fig01_lightcurve_background.json), [Fig02 t5 t95 markers](figures/fig02_t5_t95_markers.json).
+- [View Fig05 model sensitivity](figures/fig05_model_sensitivity.png).
+
+To rebuild the table profiles after rebuilding the evidence inventory, run `python scripts/profile_evidence_tables.py` followed by `python scripts/render_table_profiles.py`.
+
 [Open the evidence browser file](evidence.html) for 13 selected files, including [`fig05_model_sensitivity.json`](figures/fig05_model_sensitivity.json). Each file has a download link and SHA-256 digest. Serve this checkout with `python -m http.server` to view the static browser.
 
 Rebuild the inventory and browser with `python scripts/evidence_catalog.py` and `python scripts/render_evidence_page.py`.
